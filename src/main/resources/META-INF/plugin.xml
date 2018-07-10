@@ -1,0 +1,36 @@
+<idea-plugin>
+  <id>cn.rieon.idea.maven-search</id>
+
+  <name>Maven Search</name>
+  <description>
+    <![CDATA[
+      Search the Maven repository <br/>
+      <ul>
+        <li>Search</li>
+        <li>Download</li>
+        <li>Add to POM</li>
+      </ul>
+
+      <p>
+
+      By default: <b>Ctrl + Shift + S</b> to open the search dialog
+
+      </p>
+      <a href="https://github.com/rieonke/idea-maven-search">GitHub Repo</a>
+    ]]>
+  </description>
+  <category>Maven</category>
+  <vendor email="rieon@rieon.cn" url="https://rieon.cn">Rieon Ke</vendor>
+
+  <depends>com.intellij.modules.lang</depends>
+  <depends>org.jetbrains.idea.maven</depends>
+
+  <actions>
+    <action id="cn.rieon.idea.maven.search.MavenSearchAction"
+      class="cn.rieon.idea.maven.search.MavenSearchAction" text="Maven Search Action"
+      description="Maven Search Action">
+      <add-to-group group-id="Maven.BaseProjectMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift meta S"/>
+    </action>
+  </actions>
+</idea-plugin>
